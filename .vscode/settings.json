@@ -127,5 +127,9 @@
         "terminal.integrated.scrollback": 15000,
         "yaml.schemas": {
                 "${workspaceFolder}/validation/module_schema.yaml": "${workspaceFolder}/src/modules/*/module.yaml"
-        }
+        },
+        "cmake.configureArgs": [
+                "-DCMAKE_C_COMPILER_FORCED:BOOL=TRUE",
+                "-DCMAKE_CXX_COMPILER_FORCED:BOOL=TRUE"
+        ]
 }
