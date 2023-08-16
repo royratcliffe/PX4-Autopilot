@@ -6,5 +6,5 @@
 #	arm-none-eabi-gcc	13.2.0
 #
 # Automatically pours dependencies.
-brew install -q cmake ninja python arm-none-eabi-gcc
+brew install -q cmake ninja python arm-none-eabi-gcc arm-none-eabi-gdb
 pip3 install -r Tools/setup/requirements.txt

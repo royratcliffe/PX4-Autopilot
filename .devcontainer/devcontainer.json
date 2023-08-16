@@ -6,7 +6,7 @@
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 
 	// Allows ptrace based debuggers like C++ to work in the container.
-	// See https://containers.dev/implementors/json_reference
+	// See https://containers.dev/implementors/json_reference for details.
 	"runArgs": [
 		"--cap-add=SYS_PTRACE",
 		"--security-opt",
