@@ -5,6 +5,14 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 
+	// Allows ptrace based debuggers like C++ to work in the container.
+	// See https://containers.dev/implementors/json_reference
+	"runArgs": [
+		"--cap-add=SYS_PTRACE",
+		"--security-opt",
+		"seccomp=unconfined"
+	]
+
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {
