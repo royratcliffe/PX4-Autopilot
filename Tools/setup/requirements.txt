@@ -4,6 +4,7 @@ cerberus
 coverage
 empy>=3.3
 future
+dronecan
 jinja2>=2.8
 jsonschema
 kconfiglib
