@@ -26,6 +26,12 @@ if(JAVA_ANT_PATH AND Java_JAVAC_EXECUTABLE AND Java_JAVA_EXECUTABLE)
 			jmavsim_run_symlink
 	)
 
+	add_custom_target(build_jmavsim_iris
+		DEPENDS
+			px4 git_jmavsim build_jmavsim jmavsim_run_symlink
+			${PX4_SOURCE_DIR}/ROMFS/px4fmu_common/init.d-posix/airframes/10017_jmavsim_iris
+	)
+
 	# launch helper
 	add_custom_target(jmavsim_iris
 		COMMAND ${CMAKE_COMMAND} -E env PX4_SYS_AUTOSTART=10017 $<TARGET_FILE:px4>
