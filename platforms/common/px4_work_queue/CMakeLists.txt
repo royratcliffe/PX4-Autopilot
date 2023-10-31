@@ -39,6 +39,10 @@ px4_add_library(px4_work_queue
 	WorkQueueManager.cpp
 )
 
+# Tell CMake about the library linkage required for the PX4 work queue.
+# It can otherwise fail with unresolved external `px4_task_spawn_cmd`.
+target_link_libraries(px4_work_queue PRIVATE px4_layer)
+
 if(PX4_TESTING)
 	add_subdirectory(test)
 endif()
