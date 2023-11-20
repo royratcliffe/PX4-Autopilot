@@ -182,7 +182,9 @@ int px4_platform_init()
 
 	px4::WorkQueueManagerStart();
 
+#ifdef CONFIG_PARAMETERS
 	param_init();
+#endif
 
 	uorb_start();
 
