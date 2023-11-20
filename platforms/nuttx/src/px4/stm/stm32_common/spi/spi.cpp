@@ -86,6 +86,8 @@
 #define CONFIG_STM32_SPI6
 #endif
 
+#if defined(CONFIG_SPI)
+
 static const px4_spi_bus_t *_spi_bus1;
 static const px4_spi_bus_t *_spi_bus2;
 static const px4_spi_bus_t *_spi_bus3;
@@ -561,3 +563,5 @@ __EXPORT void board_spi_reset(int ms, int bus_mask)
 #endif
 	}
 }
+
+#endif // CONFIG_SPI
